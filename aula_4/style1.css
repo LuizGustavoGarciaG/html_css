@@ -1,0 +1,28 @@
+body {
+  background-color: #000000; 
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+  color: rgb(200, 50, 50); 
+  text-align: center;
+  font-size: 40px;
+}
+
+h2 {
+  color: #2e8b57; 
+  text-align: left;
+  font-size: 28px;
+}
+
+.paragrafo1 {
+  color: blue; 
+  text-align: right;
+  font-size: 18px;
+}
+
+.paragrafo2 {
+  color: #8a2be2; 
+  text-align:left;
+  font-size: 22px;
+}
