@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boliche Master - Tudo sobre Boliche</title>
+    <meta name="description" content="Aprenda tudo sobre boliche: regras, técnicas, equipamentos e dicas para se tornar um expert no esporte!">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #1a1a2e;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            color: #e74c3c;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-brand i {
+            margin-right: 10px;
+            font-size: 2.2rem;
+            color: #f39c12;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: rgba(231, 76, 60, 0.2);
+            color: #e74c3c;
+        }
+
+        .mobile-menu {
+            display: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e, #2c3e50, #34495e);
+            padding: 120px 0 80px;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.pexels.com/photos/3261249/pexels-photo-3261249.jpeg') center/cover;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .hero-content {
+            flex: 1;
+            color: white;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #e74c3c, #f39c12, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: brightness(1); }
+            to { filter: brightness(1.3); }
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            color: #ecf0f1;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 18px 45px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(231, 76, 60, 0.6);
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-alt {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            color: #fff;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #e74c3c, #f39c12);
+            border-radius: 2px;
+        }
+
+        /* Rules Grid */
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .rule-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rule-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(231, 76, 60, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .rule-card:hover::before {
+            left: 100%;
+        }
+
+        .rule-card:hover {
+            transform: translateY(-10px);
+            background: rgba(231, 76, 60, 0.1);
+            box-shadow: 0 20px 40px rgba(231, 76, 60, 0.2);
+        }
+
+        .rule-card i {
+            font-size: 3.5rem;
+            color: #e74c3c;
+            margin-bottom: 1.5rem;
+        }
+
+        .rule-card h3 {
+            color: #fff;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .rule-card p {
+            color: #bdc3c7;
+            line-height: 1.8;
+        }
+
+        /* Equipment Section */
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .equipment-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .equipment-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .equipment-image {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .equipment-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #e74c3c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .equipment-info {
+            padding: 2rem;
+        }
+
+        .equipment-title {
+            color: #fff;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .equipment-description {
+            color: #bdc3c7;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .equipment-specs {
+            list-style: none;
+            color: #95a5a6;
+        }
+
+        .equipment-specs li {
+            margin-bottom: 0.5rem;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .equipment-specs li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        /* Tips Section */
+        .tips-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .tip-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .tip-number {
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .tip-card h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            margin-top: 10px;
+        }
+
+        .tip-card p {
+            color: #bdc3c7;
+            line-height: 1.8;
+        }
+
+        /* History Section */
+        .history-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .history-text {
+            color: #bdc3c7;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .history-text h3 {
+            color: #fff;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #e74c3c;
+        }
+
+        .history-image {
+            text-align: center;
+        }
+
+        .history-image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #bdc3c7;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            padding: 4rem 0 2rem;
+            color: #fff;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: #e74c3c;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .footer-section p, .footer-section li {
+            color: #bdc3c7;
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #e74c3c;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #e74c3c;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #95a5a6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 100px 0 50px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .history-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .rules-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .equipment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tips-container {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .rule-card, .equipment-card, .tip-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .rule-card:nth-child(1) { animation-delay: 0.1s; }
+        .rule-card:nth-child(2) { animation-delay: 0.2s; }
+        .rule-card:nth-child(3) { animation-delay: 0.3s; }
+        .rule-card:nth-child(4) { animation-delay: 0.4s; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #e74c3c;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c0392b;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-bowling-ball"></i>
+                <span>Boliche Master</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Início</a>
+                <a href="#rules" class="nav-link">Regras</a>
+                <a href="#equipment" class="nav-link">Equipamentos</a>
+                <a href="#tips" class="nav-link">Dicas</a>
+                <a href="#history" class="nav-link">História</a>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Domine o Boliche</h1>
+                <p>Aprenda tudo sobre este esporte fascinante: regras, técnicas, equipamentos e dicas profissionais para se tornar um expert!</p>
+                <button class="cta-button" onclick="scrollToSection('rules')">Começar a Aprender</button>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/3261249/pexels-photo-3261249.jpeg" alt="Boliche">
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="section">
+        <div class="container">
+            <h2>Regras do Boliche</h2>
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <i class="fas fa-bowling-ball"></i>
+                    <h3>Objetivo do Jogo</h3>
+                    <p>O objetivo é derrubar o máximo de pinos possível em 10 frames (rodadas). Cada frame permite até 2 arremessos, exceto o último que pode ter 3.</p>
+                </div>
+                <div class="rule-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Strike</h3>
+                    <p>Quando você derruba todos os 10 pinos no primeiro arremesso. Vale 10 pontos mais a soma dos próximos 2 arremessos.</p>
+                </div>
+                <div class="rule-card">
+                    <i class="fas fa-target"></i>
+                    <h3>Spare</h3>
+                    <p>Quando você derruba todos os 10 pinos usando os 2 arremessos do frame. Vale 10 pontos mais o próximo arremesso.</p>
+                </div>
+                <div class="rule-card">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Pontuação</h3>
+                    <p>A pontuação máxima é 300 pontos (12 strikes consecutivos). Cada pino derrubado vale 1 ponto, com bônus para strikes e spares.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Section -->
+    <section id="equipment" class="section section-alt">
+        <div class="container">
+            <h2>Equipamentos Essenciais</h2>
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <div class="equipment-image" style="background-image: url('https://images.pexels.com/photos/3261249/pexels-photo-3261249.jpeg')">
+                        <span class="equipment-badge">Essencial</span>
+                    </div>
+                    <div class="equipment-info">
+                        <h3 class="equipment-title">Bola de Boliche</h3>
+                        <p class="equipment-description">A bola é o equipamento mais importante. Deve ter peso adequado e furos ajustados aos seus dedos.</p>
+                        <ul class="equipment-specs">
+                            <li>Peso: 6 a 16 libras</li>
+                            <li>Diâmetro: 21,59 cm</li>
+                            <li>3 furos para dedos</li>
+                            <li>Material: resina ou poliuretano</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-image" style="background-image: url('https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg')">
+                        <span class="equipment-badge">Importante</span>
+                    </div>
+                    <div class="equipment-info">
+                        <h3 class="equipment-title">Sapatos de Boliche</h3>
+                        <p class="equipment-description">Sapatos especiais com sola deslizante para o movimento correto durante o arremesso.</p>
+                        <ul class="equipment-specs">
+                            <li>Sola deslizante</li>
+                            <li>Calcanhar com borracha</li>
+                            <li>Ajuste confortável</li>
+                            <li>Proteção do pé</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-image" style="background-image: url('https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg')">
+                        <span class="equipment-badge">Opcional</span>
+                    </div>
+                    <div class="equipment-info">
+                        <h3 class="equipment-title">Acessórios</h3>
+                        <p class="equipment-description">Itens que podem melhorar seu desempenho e conforto durante o jogo.</p>
+                        <ul class="equipment-specs">
+                            <li>Luva de boliche</li>
+                            <li>Toalha para limpeza</li>
+                            <li>Bolsa para transporte</li>
+                            <li>Protetor de pulso</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section id="tips" class="section">
+        <div class="container">
+            <h2>Dicas Profissionais</h2>
+            <div class="tips-container">
+                <div class="tip-card">
+                    <div class="tip-number">1</div>
+                    <h3>Postura Correta</h3>
+                    <p>Mantenha os ombros alinhados, joelhos ligeiramente flexionados e o peso distribuído equilibradamente entre os pés. Uma boa postura é a base de um bom arremesso.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">2</div>
+                    <h3>Mira e Foco</h3>
+                    <p>Escolha um ponto de mira específico na pista, não apenas os pinos. Use as setas na pista como referência para melhorar sua precisão.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">3</div>
+                    <h3>Movimento Fluido</h3>
+                    <p>O movimento deve ser suave e consistente. Pratique o balanço do braço sem a bola primeiro para desenvolver um ritmo natural.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">4</div>
+                    <h3>Liberação da Bola</h3>
+                    <p>Libere a bola no ponto mais baixo do balanço, mantendo o pulso firme. A rotação adequada vem naturalmente com a técnica correta.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">5</div>
+                    <h3>Prática Consistente</h3>
+                    <p>A consistência vem com a prática regular. Foque em repetir os mesmos movimentos até que se tornem automáticos.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-number">6</div>
+                    <h3>Mentalidade Positiva</h3>
+                    <p>Mantenha a calma e a concentração. Não se deixe abalar por arremessos ruins - foque no próximo lance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history" class="section section-alt">
+        <div class="container">
+            <h2>História do Boliche</h2>
+            <div class="history-content">
+                <div class="history-text">
+                    <h3>Origens Antigas</h3>
+                    <p>O boliche tem origens que remontam ao antigo Egito, há mais de 5.000 anos. Arqueólogos encontraram evidências de jogos similares em tumbas egípcias.</p>
+                    
+                    <h3>Evolução Moderna</h3>
+                    <p>O boliche moderno desenvolveu-se na Europa medieval e foi trazido para a América pelos colonizadores. Em 1895, foi fundada a American Bowling Congress, padronizando as regras.</p>
+                    
+                    <h3>Era Contemporânea</h3>
+                    <p>Hoje, o boliche é praticado em mais de 100 países e é considerado um dos esportes recreativos mais populares do mundo, com milhões de praticantes.</p>
+                </div>
+                <div class="history-image">
+                    <img src="https://images.pexels.com/photos/3261249/pexels-photo-3261249.jpeg" alt="História do Boliche">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Estatísticas Interessantes</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">300</div>
+                    <div class="stat-label">Pontuação Máxima</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95M</div>
+                    <div class="stat-label">Jogadores Mundiais</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Pinos por Frame</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">60</div>
+                    <div class="stat-label">Pés de Pista</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Boliche Master</h3>
+                    <p>Seu guia completo para dominar o boliche. Aprenda técnicas, regras e dicas dos profissionais para melhorar seu jogo.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#rules">Regras</a></li>
+                        <li><a href="#equipment">Equipamentos</a></li>
+                        <li><a href="#tips">Dicas</a></li>
+                        <li><a href="#history">História</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="#">Técnicas Avançadas</a></li>
+                        <li><a href="#">Calculadora de Pontos</a></li>
+                        <li><a href="#">Exercícios de Treino</a></li>
+                        <li><a href="#">Glossário de Termos</a></li>
+                        <li><a href="#">Vídeos Tutoriais</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> contato@bolichmaster.com</p>
+                    <p><i class="fas fa-phone"></i> (11) 9999-8888</p>
+                    <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Boliche Master. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navegação suave
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // Navegação do menu
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToSection(targetId);
+                
+                // Atualizar link ativo
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Destacar seção ativa durante scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Animação de contadores
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = counter.textContent;
+                    const count = +counter.getAttribute('data-count') || 0;
+                    
+                    // Extrair apenas números do target
+                    const targetNum = parseInt(target.replace(/[^0-9]/g, ''));
+                    const increment = targetNum / speed;
+
+                    if (count < targetNum) {
+                        const newCount = Math.ceil(count + increment);
+                        counter.setAttribute('data-count', newCount);
+                        
+                        // Manter formato original (M para milhões, etc.)
+                        if (target.includes('M')) {
+                            counter.textContent = newCount + 'M';
+                        } else {
+                            counter.textContent = newCount;
+                        }
+                        
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        // Intersection Observer para animações
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('stats-grid')) {
+                        animateCounters();
+                    }
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos para animação
+        document.querySelectorAll('.rule-card, .equipment-card, .tip-card, .stats-grid').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Menu mobile (funcionalidade básica)
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Efeito parallax suave no hero
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero::before');
+            const speed = scrolled * 0.5;
+            
+            // Aplicar efeito parallax via CSS custom property
+            document.documentElement.style.setProperty('--scroll', `${speed}px`);
+        });
+    </script>
+</body>
+</html>
