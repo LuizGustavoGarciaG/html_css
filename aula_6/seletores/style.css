@@ -1,0 +1,135 @@
+p{
+    color: blue;
+    margin: 20px;
+}
+p{
+    color: blue;
+    margin: 20px;
+}
+p{
+    color: rgb(11, 11, 240);
+    margin: 20px;
+}
+#titulo{
+    background-color: yellow;
+margin: 20px;
+text-align: center;
+}
+.subtitulo1{
+color: green;
+margin: 20px;
+text-align: center;
+}
+.subtitulo2{
+color: green;
+margin: 20px;
+text-align: center;
+}
+.subtitulo3{
+color: green;
+margin: 20px;
+text-align: center;
+}
+li{        
+color: red;
+}
+li{        
+color: red;
+}
+li{        
+color: red;
+}
+#div1{
+background-color: rgb(177, 93, 158);
+}
+#div2{
+background-color: rgb(74, 148, 165);
+}
+.agrupamento p, h2, h3{
+    color: darkviolet;
+    margin: 20px;
+    text-align: center;
+}
+#p{
+color: darkcyan;
+text-align: center;
+}
+#google {
+      color: blue; 
+    }
+
+    #youtube {
+      color: red; 
+    }
+.p{
+color: darkslateblue;
+font-weight: bold;
+}
+.p{
+color: darkslateblue;
+font-weight: bold;
+}
+.p{
+color: darkslateblue;
+font-weight: bold;
+}
+img{
+  border-radius: 40px;
+  background-color: darkblue;
+}
+div p{
+    color: deeppink;
+}
+.paragrafo1 p{
+    color: darkcyan;
+}
+.paragrafo2 p{
+    color: blueviolet;
+}
+
+#titulo2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkorange;
+}
+.paragrafo4 {    
+color: crimson;
+font-weight: bold;
+}
+.paragrafo5{    
+color: rgb(44, 80, 44);
+font-weight: italic;
+}
+.paragrafo6 {    
+color: lightseagreen;
+text-decoration: underline ;
+}
+
+div h3{
+    color: darkslategray;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#div4{
+     color: red;
+}
+#div5{
+        color: green;
+}
+#div6{
+        color: blue;
+}
+.palavra{
+    color: rgb(218, 24, 24);
+}
+
+#div7{
+    background-color: chartreuse;
+    border: 20px solid black;
+}
+.sublinhado {
+      text-decoration: underline; 
+      color: blue; 
+    }
+
+    h1, p, a {
+      color: darkgreen;
+    }
