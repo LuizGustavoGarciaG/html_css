@@ -1,0 +1,51 @@
+ h2 {
+      margin-top: 40px; /* Espaço antes do título */
+      margin-bottom: 10px; /* Espaço depois do título */
+    }
+
+    /* Tabela 1 - Horário Escolar */
+    .tabela1, .tabela1 td, .tabela1 th {
+      border: 2px solid darkblue;
+      border-collapse: collapse;
+      padding: 8px;
+      text-align: center;
+      background-color: #f0f8ff;
+      color: darkred;
+      font-weight: bold;
+    }
+    .tabela1 th {
+      background-color: #d1e7ff;
+    }
+
+    /* Tabela 2 - Campeonato */
+    .tabela2, .tabela2 td, .tabela2 th {
+      border: 2px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+      text-align: center;
+    }
+    .tabela2 td:nth-child(2) {
+      font-weight: bold;
+      color: blue;
+    }
+    .destaque {
+      background-color: #d4edda;
+      font-weight: bold;
+    }
+    .tabela2 th {
+      background-color: #f8f9fa;
+    }
+     .tabela3, .tabela3 td, .tabela3 th {
+      border: 3px solid black;
+      border-collapse: collapse;
+      padding: 10px;
+      text-align: center;
+    }
+    .tabela3 img {
+      width: 100px;
+      display: block;
+      margin: auto;
+    }
+    .tabela3 th {
+      background-color: #f4f4f4;
+    }

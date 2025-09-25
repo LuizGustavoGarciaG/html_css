@@ -1,0 +1,11 @@
+body{
+    background-color: lightcyan;
+    color: black;
+    margin: 20px;
+    padding: 20px;
+}
+.tabela1{
+    background-color: burlywood;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
