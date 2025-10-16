@@ -1,0 +1,21 @@
+ body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #0d0c0c;
+    }
+    figure {
+      display: inline-block;
+      margin: 20px;
+      background-color: rgb(255, 255, 255);
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 250px;
+      border-radius: 8px;
+    }
+    figcaption {
+      margin-top: 10px;
+      font-style: italic;
+    }
