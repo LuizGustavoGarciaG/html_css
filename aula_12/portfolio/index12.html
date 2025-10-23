@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
+  <!-- Header Navigation -->
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <span class="brand-text">LG</span>
+                <span class="logo">&lt;LG/&gt;</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Início</a></li>
@@ -20,76 +20,70 @@
                 <li><a href="#skills" class="nav-link">Habilidades</a></li>
                 <li><a href="#contact" class="nav-link">Contato</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-background">
-            <div class="grid-overlay"></div>
+            <div class="grid-pattern"></div>
             <div class="floating-elements">
-                <div class="floating-element" style="--delay: 0s; --duration: 8s;"></div>
-                <div class="floating-element" style="--delay: 2s; --duration: 12s;"></div>
-                <div class="floating-element" style="--delay: 4s; --duration: 10s;"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
             </div>
         </div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="title-line">Olá, eu sou</span>
-                    <span class="title-name">Luiz Gustavo</span>
-                    <span class="title-role">Desenvolvedor em Formação</span>
-                </h1>
-                <p class="hero-description">
-                    Estudante apaixonado por tecnologia, transformando ideias em projetos reais através de código limpo e soluções inovadoras.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-                    <a href="#contact" class="btn btn-secondary">Entrar em Contato</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="code-window">
-                    <div class="window-header">
-                        <div class="window-controls">
-                            <span class="control red"></span>
-                            <span class="control yellow"></span>
-                            <span class="control green"></span>
-                        </div>
-                        <span class="window-title">portfolio.js</span>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="text-gradient">Luiz Gustavo</span><br>
+                        <span class="typewriter">Desenvolvedor em Formação</span>
+                    </h1>
+                    <p class="hero-description">
+                        Estudante de Análise e Desenvolvimento de Sistemas, apaixonado por transformar 
+                        ideias em projetos reais através da tecnologia.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                        <a href="#contact" class="btn btn-secondary">Contato</a>
                     </div>
-                    <div class="code-content">
-                        <div class="code-line">
-                            <span class="line-number">1</span>
-                            <span class="code-text">
-                                <span class="keyword">const</span> 
-                                <span class="variable">developer</span> = {
-                            </span>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projetos</span>
                         </div>
-                        <div class="code-line">
-                            <span class="line-number">2</span>
-                            <span class="code-text">
-                                &nbsp;&nbsp;<span class="property">name</span>: 
-                                <span class="string">'Luiz Gustavo'</span>,
-                            </span>
+                        <div class="stat">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Formações</span>
                         </div>
-                        <div class="code-line">
-                            <span class="line-number">3</span>
-                            <span class="code-text">
-                                &nbsp;&nbsp;<span class="property">skills</span>: 
-                                <span class="array">['HTML', 'CSS', 'JS']</span>,
-                            </span>
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Aprendizado</span>
                         </div>
-                        <div class="code-line">
-                            <span class="line-number">4</span>
-                            <span class="code-text">
-                                &nbsp;&nbsp;<span class="property">passion</span>: 
-                                <span class="string">'Web Development'</span>
-                            </span>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <!-- Substitua o src pela sua foto -->
+                            <img src="luiz_gustavo.jfif" alt="Luiz Gustavo" class="profile-image">
+                            <div class="profile-border"></div>
+                            <div class="status-indicator"></div>
                         </div>
-                        <div class="code-line">
-                            <span class="line-number">5</span>
-                            <span class="code-text">};</span>
+                        <div class="profile-info">
+                            <h3>Luiz Gustavo L. G. Gomes</h3>
+                            <p>Ferraz de Vasconcelos - SP</p>
+                            <div class="profile-tags">
+                                <span class="tag">ADS</span>
+                                <span class="tag">Web Dev</span>
+                                <span class="tag">Database</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -102,48 +96,45 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Sobre Mim</h2>
-                <p class="section-subtitle">Conhecendo o desenvolvedor por trás do código</p>
+                <p class="section-subtitle">Conheça minha jornada e formação</p>
             </div>
             <div class="about-content">
-                <div class="about-profile">
-                    <div class="profile-photo">
-                        <img src="luiz_gustavo.jfif" alt="Luiz Gustavo Lima Garcia Gomes" class="profile-image">
-                        <div class="photo-frame"></div>
-                    </div>
-                </div>
                 <div class="about-text">
                     <div class="about-card">
                         <div class="card-icon">👨‍💻</div>
-                        <h3>Perfil Profissional</h3>
-                        <p>Sou um estudante de tecnologia apaixonado por aprender novas linguagens, resolver desafios lógicos e transformar ideias em projetos reais.</p>
-                    </div>
-                    <div class="about-card">
-                        <div class="card-icon">🎓</div>
-                        <h3>Formação Acadêmica</h3>
-                        <ul class="education-list">
-                            <li>Análise e Desenvolvimento de Sistemas (ADS)</li>
-                            <li>Ensino Médio em andamento</li>
-                            <li>Curso de Inglês em progresso</li>
-                        </ul>
+                        <h3>Eu Profissionalmente</h3>
+                        <p>Sou um estudante de tecnologia que gosta de aprender novas linguagens, resolver desafios lógicos e transformar ideias em projetos reais.</p>
                     </div>
                     <div class="about-card">
                         <div class="card-icon">🎯</div>
-                        <h3>Objetivos</h3>
+                        <h3>Objetivos e Aspirações</h3>
                         <p>Busco oportunidades para aplicar meus conhecimentos em desenvolvimento web e crescer profissionalmente na área de tecnologia.</p>
                     </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Projetos Desenvolvidos</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">2</div>
-                        <div class="stat-label">Cursos em Andamento</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Dedicação</div>
+                <div class="about-education">
+                    <h3 class="education-title">Formação Acadêmica</h3>
+                    <div class="education-list">
+                        <div class="education-item">
+                            <div class="education-icon">🎓</div>
+                            <div class="education-content">
+                                <h4>Análise e Desenvolvimento de Sistemas</h4>
+                                <p>Estudante - Em andamento</p>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-icon">📚</div>
+                            <div class="education-content">
+                                <h4>Ensino Médio</h4>
+                                <p>Estudante - Em andamento</p>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-icon">🌍</div>
+                            <div class="education-content">
+                                <h4>Curso de Inglês</h4>
+                                <p>Em andamento</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -155,79 +146,120 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Projetos Desenvolvidos</h2>
-                <p class="section-subtitle">Explorando soluções através do desenvolvimento web</p>
+                <p class="section-subtitle">Mais de 10 projetos criados com dedicação</p>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🌐</div>
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
                         <h3>Website Empresarial</h3>
-                    </div>
-                    <p class="project-description">Desenvolvimento completo de website corporativo com design responsivo e otimizado para conversão.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
+                        <p>Desenvolvimento completo de website para empresa, com design responsivo e otimização SEO.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">📄</div>
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
                         <h3>One Page Empresarial</h3>
-                    </div>
-                    <p class="project-description">Criação de página única com foco em apresentação clara e navegação intuitiva para empresa.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">Design</span>
+                        <p>Landing page moderna e interativa para apresentação de empresa e seus serviços.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Design</span>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🚀</div>
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
                         <h3>Landing Page</h3>
-                    </div>
-                    <p class="project-description">Desenvolvimento de landing page otimizada para conversão com design moderno e responsivo.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">UX/UI</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🗄️</div>
-                        <h3>Modelagem de Banco</h3>
-                    </div>
-                    <p class="project-description">Criação de modelos DER e MER para estruturação eficiente de banco de dados empresarial.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">SGBD</span>
-                        <span class="tech-tag">Modelagem</span>
-                        <span class="tech-tag">SQL</span>
+                        <p>Página de conversão otimizada para captação de leads e apresentação de produtos.</p>
+                        <div class="project-tags">
+                            <span class="tag">Landing</span>
+                            <span class="tag">Conversion</span>
+                            <span class="tag">UX</span>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🔧</div>
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Modelos DER e MER</h3>
+                        <p>Desenvolvimento de modelos de banco de dados para sistema empresarial completo.</p>
+                        <div class="project-tags">
+                            <span class="tag">Database</span>
+                            <span class="tag">DER</span>
+                            <span class="tag">MER</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
                         <h3>Projetos de Estudo</h3>
-                    </div>
-                    <p class="project-description">Diversos projetos voltados ao aprendizado de desenvolvimento web e banco de dados.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Estudos</span>
-                        <span class="tech-tag">Prática</span>
-                        <span class="tech-tag">Web Dev</span>
+                        <p>Diversos projetos voltados ao desenvolvimento web e gerenciamento de banco de dados.</p>
+                        <div class="project-tags">
+                            <span class="tag">Web Dev</span>
+                            <span class="tag">Database</span>
+                            <span class="tag">Study</span>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🌐</div>
-                        <h3>Redes com Cisco</h3>
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                           
+                            </div>
+                        </div>
                     </div>
-                    <p class="project-description">Projetos desenvolvidos no Cisco Packet Tracer para simulação e configuração de redes.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Cisco</span>
-                        <span class="tech-tag">Redes</span>
-                        <span class="tech-tag">Simulação</span>
+                    <div class="project-content">
+                        <h3>Mais Projetos</h3>
+                        <p>Outros projetos em desenvolvimento e estudos contínuos em tecnologias web.</p>
+                        <div class="project-tags">
+                            <span class="tag">Em breve</span>
+                            <span class="tag">Web</span>
+                            <span class="tag">Tech</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -238,94 +270,62 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Habilidades & Tecnologias</h2>
-                <p class="section-subtitle">Ferramentas e conhecimentos em constante evolução</p>
+                <h2 class="section-title">Habilidades e Interesses</h2>
+                <p class="section-subtitle">Tecnologias que domino e estou aprendendo</p>
             </div>
             <div class="skills-content">
-                <div class="skills-category">
-                    <h3 class="category-title">Frontend</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">HTML5</span>
-                                <span class="skill-level">Avançado</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">CSS3</span>
-                                <span class="skill-level">Avançado</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">JavaScript</span>
-                                <span class="skill-level">Básico</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 45%;"></div>
-                            </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h3>Web Design</h3>
+                        <p>Criação de interfaces modernas e responsivas</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" style="--skill-level: 85%"></div>
                         </div>
                     </div>
-                </div>
-                <div class="skills-category">
-                    <h3 class="category-title">Backend & Database</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">SGBD</span>
-                                <span class="skill-level">Básico</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 50%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Modelagem de Dados</span>
-                                <span class="skill-level">Intermediário</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 65%;"></div>
-                            </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">📝</div>
+                        <h3>HTML & CSS</h3>
+                        <p>Estruturação e estilização de páginas web</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" style="--skill-level: 90%"></div>
                         </div>
                     </div>
-                </div>
-                <div class="skills-category">
-                    <h3 class="category-title">Outras Competências</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Web Design</span>
-                                <span class="skill-level">Intermediário</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%;"></div>
-                            </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">⚡</div>
+                        <h3>JavaScript</h3>
+                        <p>Conhecimentos básicos em programação web</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" style="--skill-level: 60%"></div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Cisco Packet Tracer</span>
-                                <span class="skill-level">Básico</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 55%;"></div>
-                            </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">🗄️</div>
+                        <h3>SGBD</h3>
+                        <p>Sistema de Gerenciamento de Banco de Dados</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" style="--skill-level: 70%"></div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Inglês</span>
-                                <span class="skill-level">Em andamento</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 60%;"></div>
-                            </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">🌐</div>
+                        <h3>Cisco PacketTracer</h3>
+                        <p>Projetos de redes e infraestrutura</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" style="--skill-level: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">🚀</div>
+                        <h3>Aprendizado Contínuo</h3>
+                        <p>Sempre buscando novas tecnologias</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" style="--skill-level: 100%"></div>
                         </div>
                     </div>
                 </div>
@@ -338,47 +338,35 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Vamos Conversar?</h2>
-                <p class="section-subtitle">Entre em contato para oportunidades e colaborações</p>
+                <p class="section-subtitle">Entre em contato comigo para novas oportunidades</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-card">
-                        <div class="contact-icon">📍</div>
-                        <h3>Localização</h3>
-                        <p>Ferraz de Vasconcelos – São Paulo</p>
-                    </div>
-                    <div class="contact-card">
                         <div class="contact-icon">📧</div>
                         <h3>Email</h3>
-                        <a href="mailto:luiz.gustavolggom@gmail.com" class="contact-link">
-                            luiz.gustavolggom@gmail.com
-                        </a>
+                        <a href="mailto:luiz.gustavolggom@gmail.com">luiz.gustavolggom@gmail.com</a>
                     </div>
+                    
                     <div class="contact-card">
                         <div class="contact-icon">📱</div>
                         <h3>Telefone</h3>
-                        <a href="tel:+5511943528217" class="contact-link">
-                            +55 (11) 94352-8217
-                        </a>
+                        <a href="tel:+5511943528217">+55 (11) 94352-8217</a>
                     </div>
+                    
                     <div class="contact-card">
                         <div class="contact-icon">💻</div>
                         <h3>GitHub</h3>
-                        <a href="https://github.com/LuizGustavoGarciaG" target="_blank" class="contact-link">
-                            github.com/LuizGustavoGarciaG
-                        </a>
+                        <a href="https://github.com/LuizGustavoGarciaG" target="_blank">github.com/LuizGustavoGarciaG</a>
                     </div>
                 </div>
+                
                 <div class="contact-cta">
-                    <h3>Pronto para colaborar?</h3>
-                    <p>Estou sempre aberto a novas oportunidades e desafios. Vamos criar algo incrível juntos!</p>
-                    <div class="cta-buttons">
-                        <a href="mailto:luiz.gustavolggom@gmail.com" class="btn btn-primary">
-                            Enviar Email
-                        </a>
-                        <a href="https://github.com/LuizGustavoGarciaG" target="_blank" class="btn btn-secondary">
-                            Ver GitHub
-                        </a>
+                    <h3>Pronto para colaborar!</h3>
+                    <p>Estou sempre aberto a novas oportunidades e desafios. Vamos construir algo incrível juntos?</p>
+                    <div class="contact-buttons">
+                        <a href="mailto:luiz.gustavolggom@gmail.com" class="btn btn-primary">Enviar Email</a>
+                        <a href="https://github.com/LuizGustavoGarciaG" target="_blank" class="btn btn-secondary">Ver GitHub</a>
                     </div>
                 </div>
             </div>
@@ -389,16 +377,80 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2024 Luiz Gustavo Lima Garcia Gomes. Todos os direitos reservados.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="mailto:luiz.gustavolggom@gmail.com" class="footer-link">Email</a>
-                    <a href="https://github.com/LuizGustavoGarciaG" target="_blank" class="footer-link">GitHub</a>
-                    <a href="tel:+5511943528217" class="footer-link">Telefone</a>
-                </div>
+                <p>&copy; 2024 Luiz Gustavo Lima Garcia Gomes. Todos os direitos reservados.</p>
+                <p>Desenvolvido por Luiz Gustavo</p>
             </div>
         </div>
     </footer>
-</body>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.project-card, .skill-card, .contact-card, .about-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Typewriter effect
+        const typewriterText = document.querySelector('.typewriter');
+        const text = 'Desenvolvedor em Formação';
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                typewriterText.innerHTML = text.substring(0, i + 1) + '<span class="cursor">|</span>';
+                i++;
+                setTimeout(typeWriter, 100);
+            } else {
+                typewriterText.innerHTML = text + '<span class="cursor blink">|</span>';
+            }
+        }
+
+        // Start typewriter effect after page load
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 1000);
+        });
+    </script>
 </html>
