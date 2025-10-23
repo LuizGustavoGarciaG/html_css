@@ -392,9 +392,57 @@ section {
 
 .about-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 300px 2fr 1fr;
     gap: 4rem;
     align-items: start;
+}
+
+/* Profile Photo Styles */
+.about-profile {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile-photo {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid var(--border-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(99, 102, 241, 0.2);
+}
+
+.photo-frame {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    background: var(--gradient-primary);
+    z-index: -1;
+    opacity: 0.8;
+    animation: photoGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes photoGlow {
+    0% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 0.8; transform: scale(1.02); }
 }
 
 .about-card {
@@ -779,6 +827,11 @@ section {
         gap: 3rem;
     }
     
+    .about-profile {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+    
     .contact-content {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -833,6 +886,11 @@ section {
         flex-direction: column;
         text-align: center;
     }
+    
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -859,5 +917,10 @@ section {
     .code-content {
         padding: 1rem;
         font-size: 0.8rem;
+    }
+    
+    .profile-photo {
+        width: 180px;
+        height: 180px;
     }
 }
