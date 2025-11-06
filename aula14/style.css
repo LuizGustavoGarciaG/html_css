@@ -1,15 +1,89 @@
 body{
     background-color: black;
 }
-.container4 {
+.container {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 10px;
   margin-top: 10px;
 }
-.item4 {
+.item {
     background-color: rgb(112, 133, 29);
+  padding: 20px, white;
+  color: white;
+  width: 250px;
+  height: 250px;
+  font-size: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.item1 {
+    background-color: rgb(21, 99, 130);
+  padding: 20px, white;
+  color: white;
+  width: 250px;
+  height: 250px;
+  font-size: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+.item2 {
+    background-color: rgb(19, 113, 54);
+  padding: 20px, white;
+  color: white;
+  width: 250px;
+  height: 250px;
+  font-size: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.item3 {
+    background-color: rgb(113, 19, 105);
+  padding: 20px, white;
+  color: white;
+  width: 250px;
+  height: 250px;
+  font-size: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.item4 {
+    background-color: rgb(19, 113, 54);
   padding: 20px, white;
   color: white;
   width: 250px;
@@ -21,13 +95,14 @@ body{
 }
 .container5 {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 10%;
 }
 .item5 {
-    background-color: rgb(21, 99, 130);
+    background-color: rgb(19, 79, 113);
   padding: 20px, white;
   color: white;
   width: 250px;
@@ -39,13 +114,13 @@ body{
 }
 .container6 {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   margin-top: 10px;
 }
 .item6 {
-    background-color: rgb(19, 113, 54);
+    background-color: rgb(28, 19, 113);
   padding: 20px, white;
   color: white;
   width: 250px;
@@ -57,14 +132,13 @@ body{
 }
 .container7 {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   margin-top: 10px;
 }
 .item7 {
-    background-color: rgb(113, 19, 105);
+    background-color: rgb(41, 19, 113);
   padding: 20px, white;
   color: white;
   width: 250px;
@@ -76,9 +150,8 @@ body{
 }
 .container8 {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 10px;
   margin-top: 10px;
 }
@@ -95,14 +168,13 @@ body{
 }
 .container9 {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 10px;
-  margin-top: 10%;
+  margin-top: 10px;
 }
 .item9 {
-    background-color: rgb(19, 79, 113);
+    background-color: rgb(19, 113, 54);
   padding: 20px, white;
   color: white;
   width: 250px;
@@ -114,13 +186,13 @@ body{
 }
 .container10 {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   gap: 10px;
   margin-top: 10px;
 }
 .item10 {
-    background-color: rgb(28, 19, 113);
+    background-color: rgb(113, 19, 36);
   padding: 20px, white;
   color: white;
   width: 250px;
@@ -132,84 +204,12 @@ body{
 }
 .container11 {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   gap: 10px;
   margin-top: 10px;
 }
 .item11 {
-    background-color: rgb(41, 19, 113);
-  padding: 20px, white;
-  color: white;
-  width: 250px;
-  height: 250px;
-  font-size: 5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.container12 {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: 10px;
-}
-.item12 {
-    background-color: rgb(19, 113, 54);
-  padding: 20px, white;
-  color: white;
-  width: 250px;
-  height: 250px;
-  font-size: 5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.container13 {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: 10px;
-}
-.item13 {
-    background-color: rgb(19, 113, 54);
-  padding: 20px, white;
-  color: white;
-  width: 250px;
-  height: 250px;
-  font-size: 5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.container14 {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 10px;
-  margin-top: 10px;
-}
-.item14 {
-    background-color: rgb(113, 19, 36);
-  padding: 20px, white;
-  color: white;
-  width: 250px;
-  height: 250px;
-  font-size: 5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.container15 {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 10px;
-  margin-top: 10px;
-}
-.item15 {
     background-color: rgb(113, 19, 19);
   padding: 20px, white;
   color: white;
