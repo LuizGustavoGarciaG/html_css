@@ -1,9 +1,7 @@
 .container {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: column-reverse;
-  height: 100vh;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 10px;
 }
 .item {
@@ -20,14 +18,12 @@
 }
 .container1 {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: column-reverse;
-  height: 100vh;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 .item1 {
-    background-color: black;
+    background-color: rgb(129, 32, 32);
   padding: 20px, white;
   color: white;
   width: 250px;
@@ -42,12 +38,10 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  flex-direction: column-reverse;
-  height: 100vh;
   gap: 10px;
 }
 .item2 {
-    background-color: black;
+    background-color: rgb(17, 59, 105);
   padding: 20px, white;
   color: white;
   width: 250px;
