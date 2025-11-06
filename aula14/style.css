@@ -1,7 +1,8 @@
 .container {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 10px;
 }
 .item {
@@ -14,7 +15,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 .container1 {
   display: flex;
@@ -36,12 +36,31 @@
 }
 .container2 {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 10px;
 }
 .item2 {
     background-color: rgb(17, 59, 105);
+  padding: 20px, white;
+  color: white;
+  width: 250px;
+  height: 250px;
+  font-size: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.item3 {
+    background-color: rgb(87, 17, 105);
   padding: 20px, white;
   color: white;
   width: 250px;
