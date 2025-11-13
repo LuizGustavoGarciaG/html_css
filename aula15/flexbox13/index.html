@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 13 - Flexbox</title>
+</head>
+<body>
+    <div class="gallery">
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>
+
+<style>
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.item {
+  flex: 1 1 calc(25% - 10px);
+  background: lightblue;
+  height: 150px;
+}
+@media (max-width: 800px) {
+  .item {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+@media (max-width: 500px) {
+  .item {
+    flex: 1 1 100%;
+  }
+}
+</style>
+</body>
+</html>
